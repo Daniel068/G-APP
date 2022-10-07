@@ -9,7 +9,15 @@ function Login ({navigation}){
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-   
+    useEffect(() =>{
+       const unsubscribed = auth.onAuthStateChanged(user =>{
+            if (user) {
+                navigation.replace('HomeScreen')
+            }
+        })
+
+        return unsubscribed
+    }, [])
 
 
     const handleLogin = ( ) => {
