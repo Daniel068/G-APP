@@ -48,7 +48,7 @@ class BackgroundCarousel extends React.Component {
             <View style ={{height: '100%', width:"100%", marginTop:15, padding:20, borderRadius:10,}}>
                 <ScrollView 
                 horizontal // to make scrolling horizontal
-                pagingEnabled //to know which page is currently viewing
+                pagingDisabled //to know which page is currently viewing
                 onMomentumScrollEnd={this.setSelectedIndex} 
                 ref={this.scrollRef}
                 >

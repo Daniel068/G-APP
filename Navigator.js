@@ -5,13 +5,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon  from 'react-native-vector-icons/MaterialIcons';
 import Icons  from 'react-native-vector-icons/Octicons';
 
+
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 import HomeScreen from './Screens/homeScreen/homeSreen';
 import Category from './Screens/Category Page/Category';
-import { Image, Text, View } from 'react-native';
+import { Alert, Image, Text, View } from 'react-native';
 import Cart from './Screens/Cart/Cart';
+import { auth } from './firebase';
 
 function HomescreenStack (){
     return(
@@ -27,7 +29,14 @@ function CartStark (){
         </Stack.Navigator>
     )
 };
-
+function HandleSignOut ({navigation}) {
+    auth
+    .signOut()
+    .then (() => {
+        navigation.replace ('Login')
+    })
+    return HandleSignOut ;
+}
 
 
 function TabNavigation() {
@@ -84,6 +93,26 @@ function TabNavigation() {
                     <View>
                          <Image
                              source={{uri:"https://cdn-icons-png.flaticon.com/128/3144/3144456.png"}}
+                             resizeMode='contain'
+                             style={{
+                                 width:25,
+                                 height:25,
+                                 tintColor: focused? "#F5F43D" : "black"
+                             }}
+                         />
+                    
+                     </View>
+                     
+                 )
+                 }}
+            />
+
+<Tab.Screen 
+            name= "SignOut" component = {HandleSignOut} options ={{headerShown: false,
+                tabBarIcon:({focused}) =>(
+                    <View>
+                         <Image
+                             source={{uri:"https://cdn-icons-png.flaticon.com/128/1828/1828427.png"}}
                              resizeMode='contain'
                              style={{
                                  width:25,

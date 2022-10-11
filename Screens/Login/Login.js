@@ -10,15 +10,14 @@ function Login ({navigation}){
     const [password, setPassword] = useState('')
 
     useEffect(() =>{
-       const unsubscribed = auth.onAuthStateChanged(user =>{
-            if (user) {
-                navigation.replace('HomeScreen')
-            }
-        })
-
-        return unsubscribed
-    }, [])
-
+        const unsubscribed = auth.onAuthStateChanged(user =>{
+             if (user) {
+                 navigation.replace('HomeScreen')
+             }
+         })
+ 
+         return unsubscribed
+     }, [])
 
     const handleLogin = ( ) => {
         auth.
@@ -63,18 +62,18 @@ function Login ({navigation}){
                         </View>
 
                         <View>
-                            <Pressable onPress={handleLogin} style={style.button}>
+                            <TouchableOpacity onPress={handleLogin} style={style.button}>
                                 <Text style={style.Btntext} > Login </Text>
-                            </Pressable>
+                            </TouchableOpacity>
                         </View>
 
                         <View style= {{flexDirection:"row"}}>
                             <Text>
                                 Don't have an account? 
                             </Text>
-                            <TouchableOpacity onPress={()=> navigation.navigate('Signup')}> 
+                            <Pressable onPress={()=> navigation.navigate('Signup')}> 
                                 <Text style= {{fontWeight:"bold"}}>Sign Up </Text> 
-                            </TouchableOpacity>
+                            </Pressable>
                             
                         </View>
                     </View>

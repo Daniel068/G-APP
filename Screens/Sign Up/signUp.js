@@ -5,14 +5,34 @@ import Icon  from 'react-native-vector-icons/Ionicons';
 //import {auth} from '../firebase'
 import {auth} from '../../firebase'
 
-
+export const Name = (props) => {
+    return(
+        <View>
+            Welcome, {props.setName}
+        </View>
+    )
+}
 
 
 function Signup ({navigation}){
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
     const [name, setName] = useState('')
+    
+    
+
+    useEffect(() =>{
+        const unsubscribed = auth.onAuthStateChanged(user =>{
+             if (user) {
+                 navigation.replace('Login')
+             }
+         })
+ 
+         return unsubscribed
+     }, [])
+ 
 
 const handleSignUp = ( ) => {
     auth.
@@ -47,6 +67,8 @@ const handleSignUp = ( ) => {
                                 placeholder='Enter full name'
                                 value={name}
                                 onChangeText = {text => setName(text)} 
+                                
+                                
                             
                             />
                             

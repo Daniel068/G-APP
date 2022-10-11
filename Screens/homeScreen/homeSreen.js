@@ -2,7 +2,9 @@ import React from 'react';
 import {View, Text, ScrollView, KeyboardAvoidingView, ImageBackground, StatusBar,Image, Pressable} from "react-native";
 import style from './style(H)';
 import { BackgroundCarousel } from './BackgroundCarousel';
-
+import { auth } from '../../firebase';
+import {useNavigation} from '@react-navigation/native'
+import { Name } from '../Sign Up/signUp';
 
 const images = [
     "https://media.istockphoto.com/photos/smoothies-from-frozen-black-currant-red-currant-and-gooseberry-with-picture-id468330924?k=20&m=468330924&s=612x612&w=0&h=EFpb9hA2zSQm-OYuRAqFE8SgNDMKN6QII28HhYTf7hY=", 
@@ -13,13 +15,18 @@ const images = [
 
 
 
-export default function HomeScreen ({navigation}) {
+export default function HomeScreen (props) {
    
     return(
         <KeyboardAvoidingView style={style.mainView} >
             <ScrollView>
             
-
+                <View>
+                    <Text>
+                        
+                        Email: {auth.currentUser?.email}
+                    </Text>
+                </View>
                 <View style={{flex:.8, marginBottom:10,}}>
                     <BackgroundCarousel images={images} />
                 </View>

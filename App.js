@@ -48,11 +48,11 @@ function App() {
 
   return(
     <NavigationContainer >
-      <Stack.Navigator>
+      <Stack.Navigator>  
         <Stack.Screen name='Onboarding' component={Onboarding} options ={{headerShown: false}} />
         <Stack.Screen  name= "Login" component = {Login} options ={{headerShown: false}} />
         <Stack.Screen  name= "Signup" component = {Signup} options ={{headerShown: false}} />
-        <Stack.Screen  name= "HomeScreen" component = {TabNavigation} options ={{headerShown: false}} />
+        <Stack.Screen  name= "HomeScreen" component = {TabNavigation} options ={{headerShown: false}}/>
         <Stack.Screen  name= "Cart" component = {TabNavigation} options ={{headerShown: false}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
         <Stack.Screen  name= "Basket" component = {Basket} options ={{headerShown: false}} onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
     
