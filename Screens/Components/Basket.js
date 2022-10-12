@@ -69,16 +69,16 @@ export default function Basket(props) {
 
             <View style={{flexDirection:"row"}}>
               <View>
-                <Text style={{fontWeight:'bold', fontSize:15}}>Total Price:</Text>
+                <Text style={{fontWeight:'bold', fontSize:15,color:'black'}}>Total Price:</Text>
               </View>
               <View> 
-                <Text style={{fontWeight:'bold', fontSize:15}}> NGN {totalPrice.toFixed(2)}</Text>
+                <Text style={{fontWeight:'bold', fontSize:15,color:'black'}}> NGN {totalPrice.toFixed(2)}</Text>
               </View>
             </View>
 
             <View style={style.checkoutBtn}>
-              <Pressable onPress={() => alert('Implement Checkout')}>
-                <Text>Check Out</Text>
+              <Pressable onPress={() => alert('Enjoy your Drink!')}>
+                <Text style={{fontSize: 14,color:'black', fontWeight:'500',}}>Check Out</Text>
               </Pressable>
             </View>
           </View>

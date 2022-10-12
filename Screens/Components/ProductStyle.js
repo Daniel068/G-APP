@@ -28,18 +28,21 @@ const style= StyleSheet.create({
     },
     buttonText:{
         fontSize:15,
-        fontWeight:'700'
+        fontWeight:'700',
+        color:'black'
     },
     PriceText:{
         fontSize:17,
         fontWeight:'bold',
         marginBottom:6,
         marginRight:2,
+        color:'black'
     },
     nameText:{
         fontSize:17,
         fontWeight:'500',
-        marginBottom:6
+        marginBottom:6,
+        color:'black'
     },
     ingredientText:{
         fontSize:12,

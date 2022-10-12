@@ -21,7 +21,7 @@ export default function Header(props) {
       
       <View style={style.cartView}>
         
-          <Text style={{fontWeight:'400'}}> Cart </Text>
+          <Text style={{fontWeight:'500', color:'black'}}> Cart </Text>
           
           <View style={style.cartItemView}>
             <Text >
