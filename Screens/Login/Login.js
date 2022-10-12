@@ -80,7 +80,7 @@ function Login ({navigation}){
                                 Don't have an account? 
                             </Text>
                             <Pressable onPress={()=> navigation.navigate('Signup')}> 
-                                <Text style= {{fontWeight:"bold"}}>Sign Up </Text> 
+                                <Text style= {{fontWeight:"500",color:'black'}}>Sign Up </Text> 
                             </Pressable>
                             
                         </View>

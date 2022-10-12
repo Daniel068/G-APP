@@ -107,7 +107,7 @@ const handleSignUp = ( ) => {
                                 Already have an account? 
                             </Text>
                             <Pressable onPress={()=> navigation.navigate("Login")}> 
-                                <Text style= {{fontWeight:"bold"}}> Login </Text> 
+                                <Text style= {{fontWeight:"500", color:'black'}}> Login </Text> 
                             </Pressable>
                             
                         </View>

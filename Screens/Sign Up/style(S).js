@@ -50,7 +50,8 @@ const style = StyleSheet.create({
         fontSize:24,
         fontWeight:"500",
         marginBottom:40,
-        textAlign:"center"
+        textAlign:"center",
+        color:'black'
         
     },
     Btntext:{
