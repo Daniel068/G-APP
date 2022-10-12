@@ -55,7 +55,7 @@ function TabNavigation() {
                  
             },
             tabBarLabelStyle:{
-                fontSize:11,
+                fontSize:13,
                 color:'black',
                 marginBottom:6,
                 fontWeight:"400",

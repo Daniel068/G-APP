@@ -7,9 +7,39 @@ const style = StyleSheet.create({
         flexDirection:"column",
         alignContent:"center",
         justifyContent:"center",
-        
         alignItems:"center"
     },
+    iconView:{
+        height:40,
+        width:60,
+        backgroundColor:"",
+        borderRadius:10,
+        alignSelf:"flex-start",
+        justifyContent:"center",
+        alignContent:"center",
+        alignItems:"center",
+        position:'absolute',
+        top:-20,
+        left:-86
+      
+    },
+    appName:{
+        fontSize:22,
+        fontWeight:'bold',
+        color:'black'
+    },
+    appNameView:{
+        alignContent:'center',
+        justifyContent:'center',
+        alignItems:'center',
+        borderBottomLeftRadius:10,
+        borderBottomRightRadius:10,
+        backgroundColor:'#03E05B',
+        height:50,
+        width:410,
+        flexDirection:'row',
+    },
+
     Producttile1:{
         width:149,
         height:157,
@@ -30,8 +60,8 @@ const style = StyleSheet.create({
         alignSelf:"center",
         alignItems:"center",
         justifyContent:"center",
-        marginTop:10,
-        marginBottom:10,
+        marginTop:20,
+        marginBottom:5,
        
         
     },
@@ -58,6 +88,18 @@ const style = StyleSheet.create({
         borderTopEndRadius:10,
         borderTopStartRadius:10,
         marginTop:112,
+    },
+    welcomeView:{
+        alignItems:'center',
+        justifyContent:'center',
+        marginTop:18,
+
+    },
+    welcomeNote:{
+        fontSize:18,
+        fontWeight:'400',
+        marginLeft:15,
+        color:'black'
     }
 
 })

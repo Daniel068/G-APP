@@ -3,7 +3,10 @@ import { StyleSheet } from "react-native";
 const style = StyleSheet.create({
     mainView:{
         flex: 1,
-        backgroundColor:"#8bebc8",
+       
+    },
+    Background:{
+        flex:1,
         flexDirection:"column",
         alignContent:"center",
         justifyContent:"center",
@@ -16,7 +19,7 @@ const style = StyleSheet.create({
         backgroundColor:"white",  
         borderRadius:10,
         alignSelf:"center",
-        marginTop:30,
+        marginTop:60,
         justifyContent:"center",
         marginBottom:50,
         alignItems:"center",
@@ -32,7 +35,7 @@ const style = StyleSheet.create({
         alignContent:"center",
         alignItems:"center",
         alignSelf:"center",
-        marginTop:80,
+        marginTop:30,
         justifyContent:"center",
         marginBottom:10
     },
@@ -42,12 +45,12 @@ const style = StyleSheet.create({
         height:52,    
         marginBottom:30,
         borderRadius:10,
-        paddingLeft:10
+        paddingLeft:15
     },
     text:{
         fontSize:24,
         fontWeight:"500",
-        marginBottom:90,
+        marginBottom:60,
         textAlign:"center"
         
     },

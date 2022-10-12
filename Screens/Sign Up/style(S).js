@@ -3,7 +3,9 @@ import { StyleSheet } from "react-native";
 const style = StyleSheet.create({
     mainView:{
         flex: 1,
-        backgroundColor:"#8bebc8",
+    },
+    Background:{
+        flex:1,
         flexDirection:"column",
         alignContent:"center",
         justifyContent:"center",

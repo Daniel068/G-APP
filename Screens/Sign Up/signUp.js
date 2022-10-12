@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { ScrollView, KeyboardAvoidingView, View, Text, TextInput, Pressable, StyleSheet, TouchableOpacity  } from 'react-native';
+import { ScrollView, KeyboardAvoidingView, View, Text, TextInput, Pressable, StyleSheet, TouchableOpacity, ImageBackground  } from 'react-native';
 import style from './style(S)';
 import Icon  from 'react-native-vector-icons/Ionicons';
 //import {auth} from '../firebase'
@@ -45,15 +45,22 @@ const handleSignUp = ( ) => {
 }
 
     return(
-        <ScrollView >
+        
             <KeyboardAvoidingView style={style.mainView} 
-                behavior='padding'
+                behavior='height'
             >
+                 <ImageBackground
+                source={require('../Login/tangerineBg.jpg')}
+                resizeMode="cover"
+                style = {style.Background}>
+
+                
                 <View style={style.iconView}>
                     <Pressable onPress={handleSignUp} >
                         <Icon name='arrow-back-sharp' color={"black"} size={30} />
                     </Pressable>
                 </View>
+                < ScrollView>
 
                 <View style={style.heroTile} >
                         <Text style={style.text}>
@@ -105,10 +112,9 @@ const handleSignUp = ( ) => {
                             
                         </View>
                     </View>
-
-            </KeyboardAvoidingView>
-        </ScrollView>
-
+            </ScrollView>
+        </ImageBackground>
+        </KeyboardAvoidingView>
 
 )};
 

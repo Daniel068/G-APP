@@ -76,7 +76,7 @@ export default function Basket(props) {
               </View>
             </View>
 
-            <View style={{flexDirection:"row"}}>
+            <View style={style.checkoutBtn}>
               <Pressable onPress={() => alert('Implement Checkout')}>
                 <Text>Check Out</Text>
               </Pressable>
@@ -144,6 +144,18 @@ const style = StyleSheet.create({
     marginBottom:5,
     marginRight:5,
     
+  },
+  checkoutBtn:{
+    flexDirection:"row", 
+    height:25, 
+    width:80,
+    alignItems:'center', 
+    justifyContent:'center', 
+    backgroundColor:'white', 
+    marginBottom:15,
+    borderRadius:5,
+    marginTop:5,
+    marginLeft:30
   }
   
 })

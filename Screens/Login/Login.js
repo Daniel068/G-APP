@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { ScrollView, KeyboardAvoidingView, View, Text, TextInput, Pressable,TouchableOpacity  } from 'react-native';
+import { ScrollView, KeyboardAvoidingView, View, Text, TextInput, Pressable,TouchableOpacity, ImageBackground  } from 'react-native';
 import style from './style(L)';
 import  Icon  from 'react-native-vector-icons/Ionicons';
 
@@ -34,6 +34,14 @@ function Login ({navigation}){
             <KeyboardAvoidingView style={style.mainView}
                 behavior='padding'
             > 
+          
+            <ImageBackground
+                source={require('../Login/tangerineBg.jpg')}
+                resizeMode="cover"
+                style = {style.Background}
+            >
+
+           
                 
                     
 
@@ -77,9 +85,10 @@ function Login ({navigation}){
                             
                         </View>
                     </View>
-
+                </ImageBackground>
+            
             </KeyboardAvoidingView>
-        </ScrollView>
+            </ScrollView>
 
 
 )};
