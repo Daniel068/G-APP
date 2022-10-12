@@ -45,13 +45,15 @@ const style = StyleSheet.create({
         height:52,    
         marginBottom:30,
         borderRadius:10,
-        paddingLeft:15
+        paddingLeft:15,
+        
     },
     text:{
         fontSize:24,
         fontWeight:"500",
         marginBottom:60,
-        textAlign:"center"
+        textAlign:"center",
+        color:'black',
         
     },
     Btntext:{
